@@ -1,0 +1,13 @@
+.custom-file{
+	margin-bottom: 1rem;
+	input{
+		display: none;
+	}
+	label{
+		background-color: $primary;
+		color: white;
+		padding: 1rem;
+		padding: 0.3rem 1.3rem;
+		border-radius: 10px;
+	}
+}
