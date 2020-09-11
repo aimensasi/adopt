@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-	<livewire:payment-component :clientToken="$clientToken"/>
+	<livewire:payment-component :clientSecret="$clientSecret"/>
 @endsection
 
 {{--

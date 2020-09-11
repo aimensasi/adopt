@@ -2,6 +2,7 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
+use App\AdopteeBio;
 use App\Profile;
 use App\Role;
 use App\User;
@@ -28,7 +29,7 @@ $factory->define(User::class, function (Faker $faker) {
 		'email_verified_at' => now(),
 		'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
 		'remember_token' => Str::random(10),
-		'role_id' => factory(Role::class),
+		'role_id' => Role::firstOrCreate(['name' => Role::ADOPTER]),
 	];
 });
 
@@ -46,12 +47,21 @@ $factory->state(User::class, 'adoptee', function (Faker $faker) {
 
 
 $factory->define(Profile::class, function (Faker $faker) {
-	dump($faker->paragraph(5));
 	return [
 		'why_adoption' => $faker->paragraph(5),
 		'about_us' => $faker->paragraph(5),
 		'our_home' => $faker->paragraph(5),
 		'published' => true,
+		'user_id' => factory(User::class),
+	];
+});
+
+
+$factory->define(AdopteeBio::class, function (Faker $faker) {
+	return [
+		'bio' => $faker->paragraph(5),
+		'expecting_date' => now()->addMonths(3),
+		'user_id' => factory(User::class),
 	];
 });
 

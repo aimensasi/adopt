@@ -2,7 +2,7 @@
 
 require('./bootstrap');
 
-require("alpinejs");
+window.Apline = require('alpinejs');
 var flatpickr = require("flatpickr");
 
 if (document.getElementById("expecting-date")) {

@@ -66,6 +66,10 @@ class User extends Authenticatable {
 		return $this->hasOne(Profile::class);
 	}
 
+	public function bio() {
+		return $this->hasOne(AdopteeBio::class);
+	}
+
 	public function profileUpdate() {
 		return $this->profile->touched();
 	}
@@ -91,10 +95,6 @@ class User extends Authenticatable {
 	public function profileImage() {
 		$photo = optional(optional($this->profile->photos)->first())->url;
 
-		if (!$photo) {
-			return asset('images/image-placeholder.png');
-		}
-
 		return $photo;
 	}
 
@@ -105,12 +105,12 @@ class User extends Authenticatable {
 	 */
 	protected static function booted() {
 		static::created(function ($user) {
-			if ($user->hasRole(Role::ADOPTER)) {
-				$profile = new Profile;
-				$profile->user_id = $user->id;
+			// if ($user->hasRole(Role::ADOPTER)) {
+			// 	$profile = new Profile;
+			// 	$profile->user_id = $user->id;
 
-				$user->profile()->save($profile);
-			}
+			// 	$user->profile()->save($profile);
+			// }
 		});
 
 		static::deleting(function ($user) {
@@ -129,7 +129,7 @@ class User extends Authenticatable {
 
 
 	public function meetingStatusFor(User $user) {
-		$meeting = $this->meetingRequests()->firstWhere('adoptee_id', $user->id);
+		$meeting = $this->sentRequests()->firstWhere('adopter_id', $user->id);
 
 		return optional($meeting)->status;
 	}

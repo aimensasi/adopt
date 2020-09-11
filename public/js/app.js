@@ -41749,7 +41749,7 @@ module.exports = function(module) {
 // const { default: flatpickr } = require('flatpickr');
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-__webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
+window.Apline = __webpack_require__(/*! alpinejs */ "./node_modules/alpinejs/dist/alpine.js");
 
 var flatpickr = __webpack_require__(/*! flatpickr */ "./node_modules/flatpickr/dist/flatpickr.js");
 
@@ -41826,8 +41826,8 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/aimen.s.a.sasi/Sites/Code/Laravel/adopt/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/aimen.s.a.sasi/Sites/Code/Laravel/adopt/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/aimen/Sites/Code/Laravel/adopt/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/aimen/Sites/Code/Laravel/adopt/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

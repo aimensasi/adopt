@@ -32,7 +32,7 @@ class Adopter extends Component {
 	}
 
 	public function updatePhotos() {
-		$this->photos = $this->profile->photos;
+		$this->photos = $this->profile->photos->fresh();
 	}
 
 
@@ -47,12 +47,14 @@ class Adopter extends Component {
 		$this->profile->our_home = $this->ourHome;
 		$this->profile->save();
 
-		foreach ($this->tempPhotos as $photo) {
-			$url = $photo->store('album');
-			$album = new Album();
-			$album->url = $url;
+		if ($this->tempPhotos) {
+			foreach ($this->tempPhotos as $photo) {
+				$url = $photo->store('album');
+				$album = new Album();
+				$album->url = $url;
 
-			$this->profile->photos()->save($album);
+				$this->profile->photos()->save($album);
+			}
 		}
 
 

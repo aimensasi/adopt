@@ -16,7 +16,12 @@ class FamilyProfileComponent extends Component {
 	public function mount(User $adopter) {
 		$this->adopter = $adopter;
 		$this->isAdopter = $this->user->hasRole(Role::ADOPTER);
-		$this->status = $this->adopter->meetingStatusFor($this->user);
+
+		$meeting = Meeting::where('adopter_id', $adopter->id)
+			->where('adoptee_id', auth()->user()->id)->first();
+
+
+		$this->status = $meeting->status;
 	}
 
 	public function getUserProperty() {

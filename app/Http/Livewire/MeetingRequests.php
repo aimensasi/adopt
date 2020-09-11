@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Meeting;
 use Livewire\Component;
 
 class MeetingRequests extends Component {
@@ -17,8 +18,13 @@ class MeetingRequests extends Component {
 	}
 
 
-	public function onView($id) {
-		return redirect()->route('adopters.show', $id);
+	public function onAccept($id) {
+		$meeting = Meeting::find($id);
+		$meeting->status = 'Accepted';
+		$meeting->save();
+
+		$this->meetings = $this->meetings->fresh();
+		session()->flash('message', 'Great, Our team will be in touch with you to set the meeting.');
 	}
 
 	public function render() {

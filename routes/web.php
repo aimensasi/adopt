@@ -23,7 +23,14 @@ Auth::routes();
 
 Route::middleware('auth')->group(function () {
 
+	Route::get('logout', function () {
+		Auth::logout();
+
+		return redirect('/');
+	});
+
 	Route::get('adopters/{adopter}', 'AdoptersController@show')->name('adopters.show');
+	Route::get('adoptee/{adoptee}/meetings/{meeting}', 'AdopteeController@show')->name('adoptees.show');
 	Route::get('profile', 'ProfileController@profileShow')->name('profile.get');
 	Route::get('pay', 'ProfileController@pay')->name('pay');
 

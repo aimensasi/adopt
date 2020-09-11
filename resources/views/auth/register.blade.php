@@ -9,110 +9,55 @@
 
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+	<div class="w-1/3 mx-auto">
+		<h1 class="text-2xl font-bold leading-tight text-black sm:text-3xl">Get Started</h1>
+		<p class="text-base font-semibold leading-tight text-gray-primary">Let’s get you started with few steps</p>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
-                        @csrf
+		<h2 class="pt-10 text-lg font-bold leading-tight text-black sm:text-xl">Tell us about yourself</h2>
+		<p class="text-base font-semibold leading-tight text-gray-primary">This will help us in providing you with an unique experience.</p>
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Type</label>
-
-                            <div class="col-md-6">
-                                <select class="custom-select" name="type">
-																	<option selected>Choose One</option>
-																	<option value="Adopter">I am ready to adopt</option>
-																	<option value="Adoptee">Pregnant and Considering Adoption</option>
-																</select>
-
-                                @error('type')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-												</div>
-
-												<div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">Full Name</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-												</div>
+		@if($errors->any())
+			<div class="flex items-center px-4 py-3 mt-5 text-sm font-bold text-white bg-red-400" role="alert">
+				<span class="mr-3 text-white material-icons ">error</span>
+				<p class="text-sm leading-tight">{{ $errors->first() }}</p>
+			</div>
+		@endif
 
 
-												<div class="form-group row">
-                            <label for="phone_number" class="col-md-4 col-form-label text-md-right">Contact Number</label>
+		<form method="POST" action="{{ route('register') }}" class="mt-10">
+			@csrf
+			<input type="hidden" value="{{ $target }}" name="target">
 
-                            <div class="col-md-6">
-                                <input id="phone_number" type="text" class="form-control @error('phone_number') is-invalid @enderror" name="phone_number" value="{{ old('phone_number') }}" required>
+			<div class="mb-4">
+				<input type="email" placeholder="Email Address*" name="email"
+					class="text-input border-b border-solid @error('email') border-red-400 @else border-gray-400 @enderror w-full px-0 py-2 focus:outline-none focus:border-indigo-600 text-base text-black">
+					@error('email') <p data-cypress="error" class="pt-2 text-sm font-semibold text-red-400">{{ $message }}</p> @enderror
+			</div>
+			<div class="mb-4">
+				<input type="text" placeholder="Full Name*" name="name"
+					class="text-input border-b border-solid @error('email') border-red-400 @else border-gray-400 @enderror w-full px-0 py-2 focus:outline-none focus:border-indigo-600 text-base text-black">
+					@error('name') <p data-cypress="error" class="pt-2 text-sm font-semibold text-red-400">{{ $message }}</p> @enderror
+			</div>
+			<div class="mb-4">
+				<input type="text" placeholder="Phone Number*" name="phone_number"
+					class="text-input border-b border-solid @error('email') border-red-400 @else border-gray-400 @enderror w-full px-0 py-2 focus:outline-none focus:border-indigo-600 text-base text-black">
+					@error('phone_number') <p data-cypress="error" class="pt-2 text-sm font-semibold text-red-400">{{ $message }}</p> @enderror
+			</div>
+			<div class="mb-4">
+				<input type="password" placeholder="Password*" name="password"
+					class="text-input border-b border-solid @error('email') border-red-400 @else border-gray-400 @enderror w-full px-0 py-2 focus:outline-none focus:border-indigo-600 text-base text-black">
+					@error('password') <p data-cypress="error" class="pt-2 text-sm font-semibold text-red-400">{{ $message }}</p> @enderror
+			</div>
+			<div class="mb-4">
+				<input type="password" placeholder="Confirm Password*" name="password_confirmation"
+					class="text-input border-b border-solid @error('email') border-red-400 @else border-gray-400 @enderror w-full px-0 py-2 focus:outline-none focus:border-indigo-600 text-base text-black">
+			</div>
 
-                                @error('phone_number')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+			<div class="flex justify-center mt-10">
+				<button type="submit" class="w-full py-3 text-white bg-indigo-600 focus:outline-none">Register</button>
+			</div>
+		</form>
+	</div>
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection

@@ -6,10 +6,20 @@
 
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 @import "~flatpickr/dist/themes/airbnb.css";
 
 // Variables
 @import 'variables';
 @import 'base';
 
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+
+.btn[disabled] {
+  @apply bg-indigo-600 text-white border-indigo-600 cursor-not-allowed opacity-25;
+}
