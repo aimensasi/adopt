@@ -21,7 +21,7 @@ class FamilyProfileComponent extends Component {
 			->where('adoptee_id', auth()->user()->id)->first();
 
 
-		$this->status = $meeting->status;
+		$this->status = optional($meeting)->status;
 	}
 
 	public function getUserProperty() {
