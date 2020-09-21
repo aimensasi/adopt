@@ -19,7 +19,7 @@
 				<div class="mb-8">
 					<div class="mb-2 text-xl font-bold text-gray-900">{{ $adoptee->name }}</div>
 					<p class="text-base text-gray-700">{{ \Str::of($adoptee->bio->bio)->limit(140) }}</p>
-					<p class="text-base text-gray-700">Expecting Date: {{ $adoptee->bio->expecting_date->format('Y/m/d') }}</p>
+					<p class="text-base text-gray-700">Expecting Date: {{ optional($adoptee->bio->expecting_date)->format('Y/m/d') }}</p>
 					<p class="text-base text-gray-700">Email: {{ $adoptee->email }}</p>
 					<p class="text-base text-gray-700">Phone Number: {{ $adoptee->phone_number }}</p>
 				</div>
