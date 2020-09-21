@@ -29,8 +29,6 @@ class FamilyProfileComponent extends Component {
 	}
 
 	public function onRequestMeeting() {
-		// dd($this->adopter->id);
-
 		$meeting = Meeting::create([
 			'adopter_id' => $this->adopter->id,
 			'adoptee_id' => $this->user->id,
@@ -40,6 +38,14 @@ class FamilyProfileComponent extends Component {
 		$this->status = $meeting->status;
 
 		session()->flash('message', 'Meeting Request Has Been Sent, We will notify you when the request is approved.');
+	}
+
+	public function onDeleteAccount() {
+		$this->adopter->delete();
+
+		session()->flash('message', 'Adopter Account Deleted.');
+
+		return redirect()->to('/adopters');
 	}
 
 

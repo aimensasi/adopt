@@ -27,7 +27,7 @@
 					@if($user->profileUpdate() && !$user->profilePublished())
 						<div class="flex items-center w-full mt-5 text-base leading-5 text-white">
 							<span class="mr-5 material-icons">attach_money</span>
-							Make Payment
+							Pay Registration Fee Of MYR500
 
 							<a href="{{ route('pay') }}" class="inline-flex items-center px-10 py-2 ml-auto text-sm font-medium leading-5 text-indigo-600 transition duration-150 ease-in-out bg-white border border-transparent rounded-md shadow-md">
 								Start

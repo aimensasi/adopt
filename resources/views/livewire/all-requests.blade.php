@@ -7,6 +7,10 @@
 		</div>
 	@endif
 
+	<div class="flex items-center px-4 py-3 mt-5 text-sm font-bold" role="alert">
+		<p class="text-lg font-semibold leading-tight text-gray-900">Meeting Requests</p>
+	</div>
+
 
 	@if(!empty($meetings->toArray()))
 		<div class="flex flex-col w-full mt-10 bg-white border divide-y divide-gray-400 rounded-md shadow-lg">

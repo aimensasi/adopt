@@ -92,6 +92,12 @@ class User extends Authenticatable {
 		})->where('role_id', $adopter->id);
 	}
 
+	public function scopeAdoptee($query) {
+		$adoptee = Role::firstWhere('name', Role::ADOPTEE);
+
+		return $query->has('bio')->where('role_id', $adoptee->id);
+	}
+
 	public function profileImage() {
 		$photo = optional(optional($this->profile->photos)->first())->url;
 
@@ -114,7 +120,12 @@ class User extends Authenticatable {
 		});
 
 		static::deleting(function ($user) {
-			$user->profile->delete();
+			if ($user->profile) {
+				$user->profile->delete();
+			}
+			if ($user->bio) {
+				$user->bio->delete();
+			}
 		});
 	}
 

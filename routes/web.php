@@ -31,8 +31,12 @@ Route::middleware('auth')->group(function () {
 
 	Route::get('adopters/{adopter}', 'AdoptersController@show')->name('adopters.show');
 	Route::get('adoptee/{adoptee}/meetings/{meeting}', 'AdopteeController@show')->name('adoptees.show');
+	Route::get('adoptee/{adoptee}', 'AdopteeController@delete')->name('adoptees.delete');
 	Route::get('profile', 'ProfileController@profileShow')->name('profile.get');
 	Route::get('pay', 'ProfileController@pay')->name('pay');
+
+	Route::get('adopters', 'AdoptersController@index');
+	Route::get('expecting-mothers', 'AdoptersController@expectingMothers');
 
 	Route::get('/home', 'HomeController@index')->name('home');
 });

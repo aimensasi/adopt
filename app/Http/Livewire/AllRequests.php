@@ -13,7 +13,7 @@ class AllRequests extends Component {
 	public $meetings = [];
 
 	public function mount() {
-		$this->meetings = Meeting::all();
+		$this->meetings = Meeting::whereUserExists()->get();
 	}
 
 

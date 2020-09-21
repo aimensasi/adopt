@@ -16,12 +16,25 @@
 				</div>
 			</div>
 			<div class="hidden md:block md:ml-8 md:pr-2">
-				<a href="/home" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Home</a>
-				<a href="#about-us" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">About Us</a>
-				<a href="#ready" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Ready To Adopt?</a>
-				<a href="#considering" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Considering Adoption?</a>
 				@auth
-					<a href="/profile" class="ml-8 font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-900">Profile</a>
+					@if(auth()->user()->hasRole('Admin'))
+						<a href="/home" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Meeting Matches</a>
+						<a href="/adopters" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Adopters</a>
+						<a href="/expecting-mothers" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Expected Mothers</a>
+					@elseif(auth()->user()->hasRole('Adoptee'))
+						<a href="/home" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Families</a>
+					@elseif(auth()->user()->hasRole('Adopter'))
+						<a href="/home" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Meeting Requests</a>
+					@endif
+				@endauth
+				<a href="/#about-us" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">About Us</a>
+				<a href="/#ready" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Ready To Adopt?</a>
+				<a href="/#considering" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Considering Adoption?</a>
+				@auth
+					@if(auth()->user()->hasRole('Admin'))
+					@else
+						<a href="/profile" class="ml-8 font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-900">Profile</a>
+					@endif
 					<a href="/logout" class="ml-8 font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-900">Logout</a>
 				@else
 					<a href="/login" class="ml-8 font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-900">Log in</a>
@@ -52,9 +65,12 @@
 				</div>
 				<div>
 					@auth
-						<a href="/profile" class="block w-full px-5 py-3 font-medium text-center text-indigo-600 transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700" role="menuitem">
-							Profile
-						</a>
+						@if(auth()->user()->hasRole('Admin'))
+						@else
+							<a href="/profile" class="block w-full px-5 py-3 font-medium text-center text-indigo-600 transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700" role="menuitem">
+								Profile
+							</a>
+						@endif
 						<a href="/logout" class="block w-full px-5 py-3 font-medium text-center text-indigo-600 transition duration-150 ease-in-out bg-gray-50 hover:bg-gray-100 hover:text-indigo-700 focus:outline-none focus:bg-gray-100 focus:text-indigo-700" role="menuitem">
 							Logout
 						</a>

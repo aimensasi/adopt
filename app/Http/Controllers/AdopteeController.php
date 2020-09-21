@@ -21,4 +21,10 @@ class AdopteeController extends Controller {
 			'adoptee' => $adoptee
 		]);
 	}
+
+	public function delete(User $adoptee) {
+		$adoptee->delete();
+
+		return redirect()->back()->with('message', 'User Deleted.');
+	}
 }

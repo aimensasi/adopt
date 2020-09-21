@@ -40,4 +40,8 @@ class Meeting extends Model {
 	public function adoptee() {
 		return $this->belongsTo(User::class, 'adoptee_id');
 	}
+
+	public function scopeWhereUserExists($query) {
+		return $query->has('adoptee')->has('adopter');
+	}
 }
