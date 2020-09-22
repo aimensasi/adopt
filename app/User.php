@@ -144,4 +144,8 @@ class User extends Authenticatable {
 
 		return optional($meeting)->status;
 	}
+
+	public function children() {
+		return $this->hasMany(ChildRequest::class, 'adopter_id');
+	}
 }

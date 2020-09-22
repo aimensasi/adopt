@@ -21,10 +21,12 @@
 						<a href="/home" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Meeting Matches</a>
 						<a href="/adopters" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Adopters</a>
 						<a href="/expecting-mothers" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Expected Mothers</a>
+						<a href="/children" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Children</a>
 					@elseif(auth()->user()->hasRole('Adoptee'))
 						<a href="/home" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Families</a>
 					@elseif(auth()->user()->hasRole('Adopter'))
 						<a href="/home" class="font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Meeting Requests</a>
+						<a href="/children" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">Children</a>
 					@endif
 				@endauth
 				<a href="/#about-us" class="ml-8 font-medium text-gray-500 transition duration-150 ease-in-out hover:text-gray-900">About Us</a>

@@ -38,5 +38,17 @@ Route::middleware('auth')->group(function () {
 	Route::get('adopters', 'AdoptersController@index');
 	Route::get('expecting-mothers', 'AdoptersController@expectingMothers');
 
+	Route::get('children', 'ChildrenController@index')->name('children.index');
+	Route::get('children/create', 'ChildrenController@create')->name('children.create');
+	Route::post('children', 'ChildrenController@store')->name('children.store');
+	Route::get('children/{child}', 'ChildrenController@show')->name('children.show');
+	Route::get('children/{child}/edit', 'ChildrenController@edit')->name('children.edit');
+	Route::post('children/{child}/update', 'ChildrenController@update')->name('children.update');
+	Route::get('children/{child}/request', 'ChildrenController@request')->name('children.request');
+	Route::get('children/{request}/approve', 'ChildrenController@approve')->name('children.approve');
+	Route::get('children/{request}/reject', 'ChildrenController@reject')->name('children.reject');
+
+	Route::resource('child-requests', 'ChildRequests');
+
 	Route::get('/home', 'HomeController@index')->name('home');
 });

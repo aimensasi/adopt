@@ -25,9 +25,9 @@
 <body>
 
 	<div class="relative overflow-hidden bg-white">
-		<div class="w-full mb-40">
+		<div class="w-full">
 			@include('layouts.partials.header')
-			<main class="w-full">
+			<main class="w-full pt-40 mb-10">
 				@yield('content')
 			</main>
 		</div>

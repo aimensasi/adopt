@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.guest')
 
 @section('content')
 <div class="w-1/3 mx-auto">
@@ -27,6 +27,12 @@
 					class="text-input border-b border-solid @error('email') border-red-400 @else border-gray-400 @enderror w-full px-0 py-2 focus:outline-none focus:border-indigo-600 text-base text-black">
 					@error('password') <p data-cypress="error" class="pt-2 text-sm font-semibold text-red-400">{{ $message }}</p> @enderror
 			</div>
+
+			@if (Route::has('password.request'))
+				<a class="text-sm text-gray-600 underline hover:text-gray-900" href="{{ route('password.request') }}">
+					{{ __('Forgot your password?') }}
+				</a>
+			@endif
 
 			<div class="flex justify-center mt-10">
 				<button type="submit" class="w-full py-3 text-white bg-indigo-600 focus:outline-none">Login</button>

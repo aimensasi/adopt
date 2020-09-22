@@ -32,13 +32,13 @@
 <div class="p-10 bg-indigo-600" id="about-us">
 	<h2 class="text-4xl text-white">About Us</h2>
 	<p class="mt-5 text-base text-justify text-white">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor leo nisi, non malesuada tellus pulvinar et. Duis dignissim vehicula nunc. Phasellus dui est, aliquet id dictum vel, vehicula quis leo. Mauris ultricies feugiat faucibus. Vestibulum elementum ac ipsum et dictum. Aliquam mattis sem suscipit bibendum varius. Nulla ornare lorem at ex tincidunt, id ornare elit maximus. Aliquam at sollicitudin augue, sit amet rutrum nulla. Quisque in mattis augue, sit amet viverra sem. Donec id egestas risus. Aenean ipsum mi, ullamcorper ac neque vel, porttitor eleifend nunc. Pellentesque vel dui augue.
+		Adoptly is a web application that endeavors to provide institutionalized children and unplanned, at-risk newborn babies the joy and safety of growing up in a family. No child should be denied family life because of circumstances.
 		<br/>
+		The idea for Adoptly started as a way to increase accessibility for expecting mothers to qualified adoptive parents in a safe and private platform online that speeds up the adoption process. While also providing children with a way to find a safe and loving home, reducing the high numbers of children living in institutions.
 		<br/>
-		Phasellus volutpat felis a sapien interdum auctor. Aliquam erat volutpat. Aenean placerat est tortor, et ornare dui eleifend at. Praesent ac lacus porttitor, fermentum nisl quis, molestie metus. Etiam nec velit at velit pellentesque hendrerit id vitae lacus. Donec ac ligula pretium, euismod enim et, commodo arcu. Integer vitae dapibus turpis.
-		<br/>
-		<br/>
-		Nullam consequat quis dolor sed molestie. Nulla commodo tortor eget urna fringilla imperdiet. Integer faucibus turpis urna, non eleifend libero egestas eu. Proin consequat tempus eros. Maecenas et lectus commodo, ullamcorper risus ut, cursus magna. Nullam eu nibh sit amet turpis varius convallis sit amet sit amet lectus. Integer ex ex, aliquam dapibus gravida et, ullamcorper ac nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent tempor turpis rutrum felis mattis, non vestibulum risus congue. Sed in turpis sem. Nam viverra mi magna, et tempus magna consequat in. Phasellus egestas rhoncus porttitor. Suspendisse potenti. Maecenas non arcu mi. Sed quis posuere nibh, sed rhoncus tortor. Sed justo massa, elementum eget lacinia sit amet, sagittis sed turpis.
+		We work closely with the non-profit foundation OrphanCare who work closely with the Ministry of Women, Family and Community Development and the Department of Social Welfare and are partners with Lumos, an international non-profit organization that advises nations about deinstitutionalization (DI), to implement the transition from institutional care to family based care.
+		With the connections from OrphanCare we are able to work with institutions to provide children the opportunity for adoption by making them available online so as to reduce the long and cumbersome task of attempting to adopt a child in the traditional process.
+		Our aim is to provide a safe, secure and private platform for families who are searching for adoption opportunities and for expecting mothers who are looking for a safe haven for their about to be born babies.
 	</p>
 </div>
 
@@ -46,26 +46,23 @@
 <div class="p-10 bg-white" id="ready">
 	<h2 class="text-4xl text-indigo-600">Ready To Adopt?</h2>
 	<p class="mt-5 text-base text-justify text-gray-500">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor leo nisi, non malesuada tellus pulvinar et. Duis dignissim vehicula nunc. Phasellus dui est, aliquet id dictum vel, vehicula quis leo. Mauris ultricies feugiat faucibus. Vestibulum elementum ac ipsum et dictum. Aliquam mattis sem suscipit bibendum varius. Nulla ornare lorem at ex tincidunt, id ornare elit maximus. Aliquam at sollicitudin augue, sit amet rutrum nulla. Quisque in mattis augue, sit amet viverra sem. Donec id egestas risus. Aenean ipsum mi, ullamcorper ac neque vel, porttitor eleifend nunc. Pellentesque vel dui augue.
-		<br/>
-		<br/>
-		Phasellus volutpat felis a sapien interdum auctor. Aliquam erat volutpat. Aenean placerat est tortor, et ornare dui eleifend at. Praesent ac lacus porttitor, fermentum nisl quis, molestie metus. Etiam nec velit at velit pellentesque hendrerit id vitae lacus. Donec ac ligula pretium, euismod enim et, commodo arcu. Integer vitae dapibus turpis.
-		<br/>
-		<br/>
-		Nullam consequat quis dolor sed molestie. Nulla commodo tortor eget urna fringilla imperdiet. Integer faucibus turpis urna, non eleifend libero egestas eu. Proin consequat tempus eros. Maecenas et lectus commodo, ullamcorper risus ut, cursus magna. Nullam eu nibh sit amet turpis varius convallis sit amet sit amet lectus. Integer ex ex, aliquam dapibus gravida et, ullamcorper ac nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent tempor turpis rutrum felis mattis, non vestibulum risus congue. Sed in turpis sem. Nam viverra mi magna, et tempus magna consequat in. Phasellus egestas rhoncus porttitor. Suspendisse potenti. Maecenas non arcu mi. Sed quis posuere nibh, sed rhoncus tortor. Sed justo massa, elementum eget lacinia sit amet, sagittis sed turpis.
+		Adoptive Parent Resources
+		Many resources are available recommended for adoptive parents. We have agents to guide you through the entire process of child adoption and to answer any queries you may have. This includes providing advice in financial aspects, legal aspects, preparation for adoption resources
+		Pregnant and Considering Adoption?
+		We have numerous sources to assist you in preparing for adoption including personal consultations and legal advice. We are here to help you and your privacy is of utmost importance to us.
+		The Basics of Legal and Ethical Adoption
+		We work to ensure that all adoptions are carried out in a legal manner under the Malaysian law on child adoption. The two main child adoption laws in Malaysia are the Adoption Act of 1952 for non-Muslim adoptions, and the Registration of Adoption Act 1952 for both Muslims and Non-Muslims. We provide basic principles on ethical child adoption to avoid unhappy parents and to protect a child’s future.
 	</p>
+	<p class="mt-5 text-base text-justify text-gray-500">Contact: amal@gmail.com for more information on the topics covered by Adoptly Team.</p>
 </div>
 
 <div class="p-10 bg-indigo-600" id="considering">
 	<h2 class="text-4xl text-white">Considering Adoption?</h2>
 	<p class="mt-5 text-base text-justify text-white">
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor leo nisi, non malesuada tellus pulvinar et. Duis dignissim vehicula nunc. Phasellus dui est, aliquet id dictum vel, vehicula quis leo. Mauris ultricies feugiat faucibus. Vestibulum elementum ac ipsum et dictum. Aliquam mattis sem suscipit bibendum varius. Nulla ornare lorem at ex tincidunt, id ornare elit maximus. Aliquam at sollicitudin augue, sit amet rutrum nulla. Quisque in mattis augue, sit amet viverra sem. Donec id egestas risus. Aenean ipsum mi, ullamcorper ac neque vel, porttitor eleifend nunc. Pellentesque vel dui augue.
-		<br/>
-		<br/>
-		Phasellus volutpat felis a sapien interdum auctor. Aliquam erat volutpat. Aenean placerat est tortor, et ornare dui eleifend at. Praesent ac lacus porttitor, fermentum nisl quis, molestie metus. Etiam nec velit at velit pellentesque hendrerit id vitae lacus. Donec ac ligula pretium, euismod enim et, commodo arcu. Integer vitae dapibus turpis.
-		<br/>
-		<br/>
-		Nullam consequat quis dolor sed molestie. Nulla commodo tortor eget urna fringilla imperdiet. Integer faucibus turpis urna, non eleifend libero egestas eu. Proin consequat tempus eros. Maecenas et lectus commodo, ullamcorper risus ut, cursus magna. Nullam eu nibh sit amet turpis varius convallis sit amet sit amet lectus. Integer ex ex, aliquam dapibus gravida et, ullamcorper ac nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent tempor turpis rutrum felis mattis, non vestibulum risus congue. Sed in turpis sem. Nam viverra mi magna, et tempus magna consequat in. Phasellus egestas rhoncus porttitor. Suspendisse potenti. Maecenas non arcu mi. Sed quis posuere nibh, sed rhoncus tortor. Sed justo massa, elementum eget lacinia sit amet, sagittis sed turpis.
+		Adoptly is emerging as a community of adoption professionals committed to ethical and compassionate adoptions, many of whom are frustrated by the “big business” aspect of adoption.  We’re hard at work to spread the word about how Adoptly is connecting like-minded people who understand the importance of child-centered adoptions.
+		Questioning yourself about the adoption process? Do not worry! Adoptly is here to guide and assist you in every step of the way. Consultations will help you answer all your questions that you have been pondering about.
+		Do check out our services available for you and do remember child adoption is a process designated to provide a child with a safe, loving home, something that everyone has the right to no matter where in the world.
+		Thank you for taking the time to learn about Adoptly!
 	</p>
 </div>
 @endsection
